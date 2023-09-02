@@ -9,6 +9,11 @@
             "date": 1693682141937,
             "name": "D:\\Level-2\\assignments\\book-catalog\\book-catalog-backend\\logs\\winston\\errors\\phu-2023-09-03-01-error.log",
             "hash": "dd2bb3e18ad714a9e6627047298bfc956f238553b6e8376af40e31e022444215"
+        },
+        {
+            "date": 1693685010544,
+            "name": "D:\\Level-2\\assignments\\book-catalog\\book-catalog-backend\\logs\\winston\\errors\\phu-2023-09-03-02-error.log",
+            "hash": "a0858e0546c356241ca367987ac40038ba2031a3eb6541c594138b4b58795374"
         }
     ],
     "hashType": "sha256"

@@ -1,10 +1,13 @@
-import { PrismaClient, User } from '@prisma/client';
+import { User } from '@prisma/client';
 import ApiError from '../../../errors/ApiError';
 import httpStatus from 'http-status';
+import prisma from '../../../shared/prisma';
+import { selectUserResponseFields } from '../../../constants/user';
+import { ISignInUser } from './auth.interface';
+import jwt, { Secret } from 'jsonwebtoken';
+import config from '../../../config';
 
-const prisma = new PrismaClient();
-
-const insertIntoDB = async (data: User): Promise<Partial<User>> => {
+const registerUser = async (data: User): Promise<Partial<User>> => {
   const isAlreadyExist = await prisma.user.findUnique({
     where: {
       email: data.email,
@@ -17,22 +20,40 @@ const insertIntoDB = async (data: User): Promise<Partial<User>> => {
 
   const result = await prisma.user.create({
     data,
-    select: {
-      id: true,
-      name: true,
-      email: true,
-      role: true,
-      contactNo: true,
-      address: true,
-      profileImg: true,
-      createdAt: true,
-      updateAt: true,
-    },
+    select: { ...selectUserResponseFields },
   });
 
   return result;
 };
 
+const signIn = async (data: ISignInUser) => {
+  const isUserExist = await prisma.user.findUnique({
+    where: {
+      email: data.email,
+    },
+  });
+
+  if (!isUserExist) {
+    throw new ApiError(httpStatus.NOT_FOUND, 'User does not exist');
+  }
+
+  if (data.password !== isUserExist.password) {
+    throw new ApiError(httpStatus.UNAUTHORIZED, 'Password is incorrect');
+  }
+
+  const token = jwt.sign(
+    {
+      role: isUserExist.role,
+      userId: isUserExist.id,
+    },
+    config.jwt.secret as Secret,
+    { expiresIn: config.jwt.expires_in },
+  );
+
+  return token;
+};
+
 export const AuthService = {
-  insertIntoDB,
+  registerUser,
+  signIn,
 };

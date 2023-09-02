@@ -4,8 +4,8 @@ import sendResponse from '../../../shared/sendResponse';
 import httpStatus from 'http-status';
 import { AuthService } from './auth.service';
 
-const insertIntoDB = catchAsync(async (req: Request, res: Response) => {
-  const result = await AuthService.insertIntoDB(req.body);
+const registerUser = catchAsync(async (req: Request, res: Response) => {
+  const result = await AuthService.registerUser(req.body);
 
   sendResponse(res, {
     statusCode: httpStatus.OK,
@@ -15,4 +15,15 @@ const insertIntoDB = catchAsync(async (req: Request, res: Response) => {
   });
 });
 
-export const AuthController = { insertIntoDB };
+const signIn = catchAsync(async (req: Request, res: Response) => {
+  const result = await AuthService.signIn(req.body);
+
+  sendResponse(res, {
+    statusCode: httpStatus.OK,
+    success: true,
+    message: 'User sign-in successfully!',
+    token: result,
+  });
+});
+
+export const AuthController = { registerUser, signIn };

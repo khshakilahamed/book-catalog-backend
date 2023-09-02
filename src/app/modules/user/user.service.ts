@@ -1,14 +1,15 @@
-import { PrismaClient, User } from '@prisma/client';
+import { User } from '@prisma/client';
+import prisma from '../../../shared/prisma';
+import { selectUserResponseFields } from '../../../constants/user';
 
-const prisma = new PrismaClient();
-
-const insertIntoDB = async (data: User): Promise<User> => {
-  console.log(data);
-  const result = await prisma.user.create({ data });
+const getAllFromDB = async (): Promise<Partial<User>[]> => {
+  const result = await prisma.user.findMany({
+    select: { ...selectUserResponseFields },
+  });
 
   return result;
 };
 
 export const UserService = {
-  insertIntoDB,
+  getAllFromDB,
 };
