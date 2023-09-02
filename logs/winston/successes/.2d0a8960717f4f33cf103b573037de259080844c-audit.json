@@ -14,6 +14,11 @@
             "date": 1693685010532,
             "name": "D:\\Level-2\\assignments\\book-catalog\\book-catalog-backend\\logs\\winston\\successes\\phu-2023-09-03-02-success.log",
             "hash": "66fe88fb60ef129944b8b1204d55109d75d0b07f5277ac2ae8605c94c752fbe2"
+        },
+        {
+            "date": 1693689763930,
+            "name": "D:\\Level-2\\assignments\\book-catalog\\book-catalog-backend\\logs\\winston\\successes\\phu-2023-09-03-03-success.log",
+            "hash": "7eeb7556c8eee53196dbc7ff8e8cb34de1b955947e2877a39ff58ab9bd319c47"
         }
     ],
     "hashType": "sha256"

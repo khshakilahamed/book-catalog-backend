@@ -4,8 +4,9 @@ import httpStatus from 'http-status';
 import prisma from '../../../shared/prisma';
 import { selectUserResponseFields } from '../../../constants/user';
 import { ISignInUser } from './auth.interface';
-import jwt, { Secret } from 'jsonwebtoken';
+import { Secret } from 'jsonwebtoken';
 import config from '../../../config';
+import { jwtHelpers } from '../../../helpers/jwtHelpers';
 
 const registerUser = async (data: User): Promise<Partial<User>> => {
   const isAlreadyExist = await prisma.user.findUnique({
@@ -41,13 +42,21 @@ const signIn = async (data: ISignInUser) => {
     throw new ApiError(httpStatus.UNAUTHORIZED, 'Password is incorrect');
   }
 
-  const token = jwt.sign(
+  // const token = jwt.sign(
+  // {
+  //   role: isUserExist.role,
+  //   userId: isUserExist.id,
+  // },
+  //   config.jwt.secret as Secret,
+  //   { expiresIn: config.jwt.expires_in },
+  // );
+  const token = jwtHelpers.createToken(
     {
       role: isUserExist.role,
       userId: isUserExist.id,
     },
     config.jwt.secret as Secret,
-    { expiresIn: config.jwt.expires_in },
+    config.jwt.expires_in as string,
   );
 
   return token;
