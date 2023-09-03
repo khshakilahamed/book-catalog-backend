@@ -22,6 +22,7 @@ model User {
 
   createdAt DateTime @default(now())
   updateAt  DateTime @updatedAt
+  orders    Order[]
 
   @@map("users")
 }
@@ -54,4 +55,20 @@ model Book {
   category   Category @relation(fields: [categoryId], references: [id])
 
   @@map("books")
+}
+
+model Order {
+  id           String   @id @default(uuid())
+  userId       String
+  user         User     @relation(fields: [userId], references: [id])
+  status       Status   @default(pending)
+  orderedBooks Json
+  createdAt    DateTime @default(now())
+
+  @@map("orders")
+}
+
+enum Status {
+  pending
+  devlivered
 }
