@@ -32,11 +32,9 @@ enum UserRole {
 }
 
 model Category {
-  id        String   @id @default(uuid())
-  title     String
-  createdAt DateTime @default(now())
-  updateAt  DateTime @updatedAt
-  books     Book[]
+  id    String @id @default(uuid())
+  title String
+  books Book[]
 
   @@map("categories")
 }
