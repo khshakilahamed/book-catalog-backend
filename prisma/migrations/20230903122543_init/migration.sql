@@ -33,6 +33,8 @@ CREATE TABLE "books" (
     "price" DOUBLE PRECISION NOT NULL,
     "genre" TEXT NOT NULL,
     "publicationDate" TEXT NOT NULL,
+    "createdAt" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    "updateAt" TIMESTAMP(3) NOT NULL,
     "categoryId" TEXT NOT NULL,
 
     CONSTRAINT "books_pkey" PRIMARY KEY ("id")
