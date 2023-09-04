@@ -1,75 +1,85 @@
 {
-  "keep": {
-    "days": true,
-    "amount": 14
-  },
-  "auditLog": "D:\\Level-2\\assignments\\book-catalog\\book-catalog-backend\\logs\\winston\\successes\\.2d0a8960717f4f33cf103b573037de259080844c-audit.json",
-  "files": [
-    {
-      "date": 1693682141917,
-      "name": "D:\\Level-2\\assignments\\book-catalog\\book-catalog-backend\\logs\\winston\\successes\\phu-2023-09-03-01-success.log",
-      "hash": "e9e16d2fcb75c63130ee86ed2c4ad7e6a4571177c74533e50db4da4f637e4184"
+    "keep": {
+        "days": true,
+        "amount": 14
     },
-    {
-      "date": 1693685010532,
-      "name": "D:\\Level-2\\assignments\\book-catalog\\book-catalog-backend\\logs\\winston\\successes\\phu-2023-09-03-02-success.log",
-      "hash": "66fe88fb60ef129944b8b1204d55109d75d0b07f5277ac2ae8605c94c752fbe2"
-    },
-    {
-      "date": 1693689763930,
-      "name": "D:\\Level-2\\assignments\\book-catalog\\book-catalog-backend\\logs\\winston\\successes\\phu-2023-09-03-03-success.log",
-      "hash": "7eeb7556c8eee53196dbc7ff8e8cb34de1b955947e2877a39ff58ab9bd319c47"
-    },
-    {
-      "date": 1693726404128,
-      "name": "D:\\Level-2\\assignments\\book-catalog\\book-catalog-backend\\logs\\winston\\successes\\phu-2023-09-03-13-success.log",
-      "hash": "ce4c7f4251ff21d5a613e788d5e304888ebd1274bacc3bde66255a8d83ad0f10"
-    },
-    {
-      "date": 1693728128454,
-      "name": "D:\\Level-2\\assignments\\book-catalog\\book-catalog-backend\\logs\\winston\\successes\\phu-2023-09-03-14-success.log",
-      "hash": "d728d3fa0b55c6f5fe9db5a7f729e336c2e63956d28abb57ac1f6c2202007cff"
-    },
-    {
-      "date": 1693731670631,
-      "name": "D:\\Level-2\\assignments\\book-catalog\\book-catalog-backend\\logs\\winston\\successes\\phu-2023-09-03-15-success.log",
-      "hash": "a05f29ad99979e2e1f4609cf37201b42df015d3e7da5ae464cdcf6ff7a02f243"
-    },
-    {
-      "date": 1693739397682,
-      "name": "D:\\Level-2\\assignments\\book-catalog\\book-catalog-backend\\logs\\winston\\successes\\phu-2023-09-03-17-success.log",
-      "hash": "bbe2f4c03d7ac25481a4326e55b4cff8cac0ccb48eb0d18ad6eee7832f65c917"
-    },
-    {
-      "date": 1693742444624,
-      "name": "D:\\Level-2\\assignments\\book-catalog\\book-catalog-backend\\logs\\winston\\successes\\phu-2023-09-03-18-success.log",
-      "hash": "4ad62612db4d9c6ef467493f33b10b691fcae6364b630130817ecf399f7d7c2b"
-    },
-    {
-      "date": 1693747145994,
-      "name": "D:\\Level-2\\assignments\\book-catalog\\book-catalog-backend\\logs\\winston\\successes\\phu-2023-09-03-19-success.log",
-      "hash": "153d97f65854669cdb7d40f07f557519f76203e944132c2bf7596c98d4ccf600"
-    },
-    {
-      "date": 1693749704518,
-      "name": "D:\\Level-2\\assignments\\book-catalog\\book-catalog-backend\\logs\\winston\\successes\\phu-2023-09-03-20-success.log",
-      "hash": "402501bbb067fe9d7a41b73eca4555b28dae10125580ede2350260afa3039965"
-    },
-    {
-      "date": 1693758011064,
-      "name": "D:\\Level-2\\assignments\\book-catalog\\book-catalog-backend\\logs\\winston\\successes\\phu-2023-09-03-22-success.log",
-      "hash": "d016424b83c4711983c21194c480078b44bf38337ae606cedd56d364b7626ce2"
-    },
-    {
-      "date": 1693760815461,
-      "name": "D:\\Level-2\\assignments\\book-catalog\\book-catalog-backend\\logs\\winston\\successes\\phu-2023-09-03-23-success.log",
-      "hash": "906ba4d783aa2b4a39d9224169678838117dbeb38c36ad8cdc2531607b39d1db"
-    },
-    {
-      "date": 1693764009612,
-      "name": "D:\\Level-2\\assignments\\book-catalog\\book-catalog-backend\\logs\\winston\\successes\\phu-2023-09-04-00-success.log",
-      "hash": "a662f559966770bed5a26e209b373c9eacf6926cd07bbf809b27072b08d68b8c"
-    }
-  ],
-  "hashType": "sha256"
+    "auditLog": "D:\\Level-2\\assignments\\book-catalog\\book-catalog-backend\\logs\\winston\\successes\\.2d0a8960717f4f33cf103b573037de259080844c-audit.json",
+    "files": [
+        {
+            "date": 1693682141917,
+            "name": "D:\\Level-2\\assignments\\book-catalog\\book-catalog-backend\\logs\\winston\\successes\\phu-2023-09-03-01-success.log",
+            "hash": "e9e16d2fcb75c63130ee86ed2c4ad7e6a4571177c74533e50db4da4f637e4184"
+        },
+        {
+            "date": 1693685010532,
+            "name": "D:\\Level-2\\assignments\\book-catalog\\book-catalog-backend\\logs\\winston\\successes\\phu-2023-09-03-02-success.log",
+            "hash": "66fe88fb60ef129944b8b1204d55109d75d0b07f5277ac2ae8605c94c752fbe2"
+        },
+        {
+            "date": 1693689763930,
+            "name": "D:\\Level-2\\assignments\\book-catalog\\book-catalog-backend\\logs\\winston\\successes\\phu-2023-09-03-03-success.log",
+            "hash": "7eeb7556c8eee53196dbc7ff8e8cb34de1b955947e2877a39ff58ab9bd319c47"
+        },
+        {
+            "date": 1693726404128,
+            "name": "D:\\Level-2\\assignments\\book-catalog\\book-catalog-backend\\logs\\winston\\successes\\phu-2023-09-03-13-success.log",
+            "hash": "ce4c7f4251ff21d5a613e788d5e304888ebd1274bacc3bde66255a8d83ad0f10"
+        },
+        {
+            "date": 1693728128454,
+            "name": "D:\\Level-2\\assignments\\book-catalog\\book-catalog-backend\\logs\\winston\\successes\\phu-2023-09-03-14-success.log",
+            "hash": "d728d3fa0b55c6f5fe9db5a7f729e336c2e63956d28abb57ac1f6c2202007cff"
+        },
+        {
+            "date": 1693731670631,
+            "name": "D:\\Level-2\\assignments\\book-catalog\\book-catalog-backend\\logs\\winston\\successes\\phu-2023-09-03-15-success.log",
+            "hash": "a05f29ad99979e2e1f4609cf37201b42df015d3e7da5ae464cdcf6ff7a02f243"
+        },
+        {
+            "date": 1693739397682,
+            "name": "D:\\Level-2\\assignments\\book-catalog\\book-catalog-backend\\logs\\winston\\successes\\phu-2023-09-03-17-success.log",
+            "hash": "bbe2f4c03d7ac25481a4326e55b4cff8cac0ccb48eb0d18ad6eee7832f65c917"
+        },
+        {
+            "date": 1693742444624,
+            "name": "D:\\Level-2\\assignments\\book-catalog\\book-catalog-backend\\logs\\winston\\successes\\phu-2023-09-03-18-success.log",
+            "hash": "4ad62612db4d9c6ef467493f33b10b691fcae6364b630130817ecf399f7d7c2b"
+        },
+        {
+            "date": 1693747145994,
+            "name": "D:\\Level-2\\assignments\\book-catalog\\book-catalog-backend\\logs\\winston\\successes\\phu-2023-09-03-19-success.log",
+            "hash": "153d97f65854669cdb7d40f07f557519f76203e944132c2bf7596c98d4ccf600"
+        },
+        {
+            "date": 1693749704518,
+            "name": "D:\\Level-2\\assignments\\book-catalog\\book-catalog-backend\\logs\\winston\\successes\\phu-2023-09-03-20-success.log",
+            "hash": "402501bbb067fe9d7a41b73eca4555b28dae10125580ede2350260afa3039965"
+        },
+        {
+            "date": 1693758011064,
+            "name": "D:\\Level-2\\assignments\\book-catalog\\book-catalog-backend\\logs\\winston\\successes\\phu-2023-09-03-22-success.log",
+            "hash": "d016424b83c4711983c21194c480078b44bf38337ae606cedd56d364b7626ce2"
+        },
+        {
+            "date": 1693760815461,
+            "name": "D:\\Level-2\\assignments\\book-catalog\\book-catalog-backend\\logs\\winston\\successes\\phu-2023-09-03-23-success.log",
+            "hash": "906ba4d783aa2b4a39d9224169678838117dbeb38c36ad8cdc2531607b39d1db"
+        },
+        {
+            "date": 1693764009612,
+            "name": "D:\\Level-2\\assignments\\book-catalog\\book-catalog-backend\\logs\\winston\\successes\\phu-2023-09-04-00-success.log",
+            "hash": "a662f559966770bed5a26e209b373c9eacf6926cd07bbf809b27072b08d68b8c"
+        },
+        {
+            "date": 1693816803099,
+            "name": "D:\\Level-2\\assignments\\book-catalog\\book-catalog-backend\\logs\\winston\\successes\\phu-2023-09-04-14-success.log",
+            "hash": "44a098552b0859cf9211f40d41dca760aa3463654afc5ab38a68896af5bd142e"
+        },
+        {
+            "date": 1693818657504,
+            "name": "D:\\Level-2\\assignments\\book-catalog\\book-catalog-backend\\logs\\winston\\successes\\phu-2023-09-04-15-success.log",
+            "hash": "30caf8e7cd4771923c9710ac4c9af928b1b26f962f5eca82728a600bfe82872d"
+        }
+    ],
+    "hashType": "sha256"
 }

@@ -24,7 +24,7 @@ const getAllFromDB = async (
 ) => {
   const { page, limit, skip, sortBy, sortOrder } =
     paginationHelpers.calculatePagination(options);
-  const { searchTerm, ...filterData } = filters;
+  const { searchTerm, minPrice, maxPrice, ...filterData } = filters;
 
   const andConditions = [];
 
@@ -36,6 +36,36 @@ const getAllFromDB = async (
           mode: 'insensitive',
         },
       })),
+    });
+  }
+
+  const minPriceFromDB: { price: number } | null = await prisma.book.findFirst({
+    select: {
+      price: true,
+    },
+    orderBy: {
+      price: 'asc',
+    },
+  });
+
+  const maxPriceFromDB: { price: number } | null = await prisma.book.findFirst({
+    select: {
+      price: true,
+    },
+    orderBy: {
+      price: 'desc',
+    },
+  });
+
+  const floatMinPrice = minPrice ? parseFloat(minPrice) : minPriceFromDB?.price;
+  const floatMaxPrice = maxPrice ? parseFloat(maxPrice) : maxPriceFromDB?.price;
+
+  if (floatMaxPrice && floatMinPrice) {
+    andConditions.push({
+      AND: [
+        { price: { gte: floatMinPrice } },
+        { price: { lte: floatMaxPrice } },
+      ],
     });
   }
 
